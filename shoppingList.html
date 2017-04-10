@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Shopping List</title>
+	<link rel="stylesheet" type="text/css" href="My shopping list.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<div id="entireBody">
+	<form>
+		<div id="topLayer">
+			<input type="text" name="" value="" id="createItem">
+			<input type="button" name="" value="+"  id="newButton">
+			
+		</div>
+	</form>
+
+	<ul id="newList">
+		
+	</ul>
+
+	<form>
+		<input type="button" name="" value="Delete This List" id="deleteButton">
+	</form>
+</div>
+</body>
+
+<script type="text/javascript">
+
+	//function used to add a new item
+	
+	var newButton = document.getElementById("newButton");
+
+	var whenNewButtonClicks = function(){
+		var newItem = document.getElementById("createItem").value;
+		var createANewlist = document.createElement("li");
+		var deleteThisItemButton = document.createElement("button")
+		//var editButton = document.createElement("button")
+			createANewlist.textContent = newItem;
+				newList.appendChild(createANewlist);
+				//newList.appendChild(editButton);
+				newList.appendChild(deleteThisItemButton);
+
+	};
+	newButton.addEventListener("click", whenNewButtonClicks)
+
+
+	//function used for the delete list item
+	var deleteButton= document.getElementById("deleteButton");
+
+	var whenDeleteButtonClicks = function() { 
+		while(newList.hasChildNodes()){
+
+			newList.removeChild(newList.firstChild);
+		};
+	};
+	deleteButton.addEventListener("click", whenDeleteButtonClicks)
+	
+
+</script>
+</html>
